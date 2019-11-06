@@ -16,8 +16,9 @@ public class MyView extends View {
     protected void onDraw(Canvas canvas) { // создаем метод
         super.onDraw(canvas);
         Paint paint = new Paint();
-        //### ДИАГОНАЛЬНЫЕ ЛИНИИ
+        //### СВОЙ СОБСТВЕННЫЙ РИСУНОК
         canvas.drawLine(0,0, getWidth(), getHeight(), paint);
         canvas.drawLine(getWidth(), 0, 0, getHeight(), paint);
+        canvas.drawCircle(getWidth()/2, getHeight()/2, 50, paint);
     }
 }
