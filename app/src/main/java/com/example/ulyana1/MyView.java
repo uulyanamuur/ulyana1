@@ -7,18 +7,18 @@ import android.view.View;
 
 public class MyView extends View {
 
-    public MyView(Context context) { // конструктор, необходимый для нормальной работы
+    public MyView(Context context) {
         super(context);
     }
-
+    Paint paint = new Paint();
+    float x = 50;
     @Override
-
-    protected void onDraw(Canvas canvas) { // создаем метод
+    protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Paint paint = new Paint();
-        //### СВОЙ СОБСТВЕННЫЙ РИСУНОК
-        canvas.drawLine(0,0, getWidth(), getHeight(), paint);
-        canvas.drawLine(getWidth(), 0, 0, getHeight(), paint);
-        canvas.drawCircle(getWidth()/2, getHeight()/2, 50, paint);
+
+        canvas.drawCircle(x, 500, 30, paint);
+        x += 1.5f;
+        invalidate();
+        }
     }
-}
+
