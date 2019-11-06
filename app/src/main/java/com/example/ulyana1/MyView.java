@@ -16,9 +16,8 @@ public class MyView extends View {
     protected void onDraw(Canvas canvas) { // создаем метод
         super.onDraw(canvas);
         Paint paint = new Paint();
-        //### СИНИЙ КВАДРАТ
-          paint.setColor(Color.BLUE);
-          paint.setStyle(Paint.Style.FILL);
-          canvas.drawRect(100, 100, 300, 300, paint);
+        //### ДИАГОНАЛЬНЫЕ ЛИНИИ
+        canvas.drawLine(0,0, getWidth(), getHeight(), paint);
+        canvas.drawLine(getWidth(), 0, 0, getHeight(), paint);
     }
 }
