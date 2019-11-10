@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.GridLayout;
 import android.graphics.Color;
 
-
 abstract class MainActivity extends Activity implements OnClickListener,
         OnLongClickListener {
 
